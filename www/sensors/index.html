@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+		<script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+		<script src="ros_connect.js"></script>
+	</head>
+
+	<!-- declare interface and the canvases that will display the video and the still shots -->
+	<body>
+		<video style="display: none" autoplay id="video"></video>
+		<canvas style="display: none" id="canvas"></canvas>
+		<center>
+		<h3>Camera:</h3>
+		<button id="startstopbutcam" style="outline-width: 0; background-color: transparent; border: none"><img id="startstopcam" src=""/></button>
+		<br>
+		<h3>Imu:</h3>
+		<button id="startstopbutimu" style="outline-width: 0; background-color: transparent; border: none"><img id="startstopimu" src=""/></button>
+		<br>
+		<h3>GPS:</h3>
+		<button id="startstopbutgps" style="outline-width: 0; background-color: transparent; border: none"><img id="startstopgps" src=""/></button>
+		</center>
+		<script src="camera.js"></script>
+		<script src="imu.js"></script>
+		<script src="gps.js"></script>
+	</body>
+</html>
