@@ -10,6 +10,8 @@
 	<arg name="keyfile" default="$(arg keyfile)" />
 	<arg name="authenticate" default="false" />
 </include>
-<node name="web_video_server" pkg="web_video_server" type="web_video_server" />
+<node name="web_video_server" pkg="web_video_server" type="web_video_server">
+	<param name="port" value="8008" />
+</node>
 <node name="republish" pkg="image_transport" type="republish" args="compressed in:=/camera/image raw out:=/camera/image" />
 </launch>

@@ -96,7 +96,7 @@ startstopcam.addEventListener('click', function(ev){
     cameraOn();
     cameraTimer = setInterval(function(){
       takepicture();
-    }, 250);       // publish an image 4 times per second
+    }, 200);       // publish an image 5 times per second
     document.getElementById('startstopcam').setAttribute('src', RECORD_ON);
   } else {
     // ros.close();

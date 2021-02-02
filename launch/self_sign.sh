@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [ -z "$1" ]; then
-	FQDN="localhost"
+	FQDN="0.0.0.0"
 else
 	FQDN="$1"
 fi

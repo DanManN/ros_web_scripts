@@ -1,4 +1,5 @@
 var topicName = '/turtle1/cmd_vel'
+// var topicName = '/cmd_vel'
 var twist;
 var cmdVel;
 var publishImmidiately = true;
@@ -112,7 +113,8 @@ window.onload = function () {
   robot_IP = window.location.hostname;
 
   // set robot address statically
-  // robot_IP = "localhost";
+  // robot_IP = "offinto.space";
+  // robot_IP = "192.168.1.8";
 
   // Init handle for rosbridge_websocket
   ros = new ROSLIB.Ros({
@@ -125,7 +127,7 @@ window.onload = function () {
   video = document.getElementById('video');
 
   // Populate video source
-  video.src = "http://" + robot_IP + ":8080/stream?topic=/camera/image";
+  video.src = "http://" + robot_IP + ":8008/stream?topic=/camera/image";
 
   // video.onload = function () { // uncomment to lock controls to whether video is correctly loaded
   createJoystick();

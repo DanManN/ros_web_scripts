@@ -6,7 +6,7 @@ import sys
 import socketserver
 import http.server as httpserver
 
-ADDRESS = sys.argv[1] if len(sys.argv) > 1 else 'localhost'
+ADDRESS = sys.argv[1] if len(sys.argv) > 1 else '0.0.0.0'
 PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 4443
 
 httpd = socketserver.TCPServer((ADDRESS, PORT), httpserver.SimpleHTTPRequestHandler)

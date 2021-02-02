@@ -11,8 +11,9 @@ ros.on('error', function(error) { console.log('Error connecting to websocket ser
 
 ros.on('close', function() { console.log('Connection to websocket server closed.');});
 
-// var hostname = window.location.hostname;
-var hostname = "192.168.1.99";
+var hostname = window.location.hostname;
+// var hostname = "offinto.space";
+// var hostname = "192.168.1.8";
 
 function rosConnect() {
   if (!ros.isConnected) {
